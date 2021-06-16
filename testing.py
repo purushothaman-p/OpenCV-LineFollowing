@@ -4,13 +4,10 @@ import numpy as np
 
 def get_contour_center(contour):
     m = cv2.moments(contour)
-
     if m["m00"] == 0:
         return [0, 0]
-
     x = int(m["m10"] / m["m00"])
     y = int(m["m01"] / m["m00"])
-
     return [x, y]
 
 
