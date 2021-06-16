@@ -29,7 +29,6 @@ def process(image):
 
 def slice_out(im, num):
     cont_cent = list()
-
     height, width = im.shape[:2]
     sl = int(height / num)
     sliced_imgs = list()
@@ -43,7 +42,6 @@ def slice_out(im, num):
         cont_cent.append(processed[1])
     # print(cont_cent)
     return sliced_imgs, cont_cent
-
 
 def remove_background(image, b):
     up = 100
@@ -99,7 +97,6 @@ def main():
             break
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
-
     cap.release()
     cv2.destroyAllWindows()
 
